@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.LessonFragment">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_standard"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioViking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginEnd="@dimen/padding_standard"
+            android:layout_marginBottom="@dimen/padding_half"
+            android:checked="true"
+            android:text="@string/viking" />
+
+        <RadioButton
+            android:id="@+id/radioCannon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginEnd="@dimen/padding_standard"
+            android:layout_marginBottom="@dimen/padding_half"
+            android:checked="false"
+            android:text="@string/cannon" />
+
+        <RadioButton
+            android:id="@+id/radioTarget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginEnd="@dimen/padding_standard"
+            android:layout_marginBottom="@dimen/padding_half"
+            android:checked="false"
+            android:text="@string/target" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonScale"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="112dp"
+        android:text="Scale"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRotate"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:text="Rotate"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonScale" />
+
+    <Button
+        android:id="@+id/buttonEndEdit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:text="End Edit"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRotate" />
+
+
+    <Button
+        android:id="@+id/buttonStartPlay"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:text="Play Video"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/textInstruction"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:elevation="1dp"
+        android:text="Swipe Left, right, up and down to detect Swipe Gesture"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/surfaceView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
